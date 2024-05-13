@@ -2,25 +2,34 @@ package hw2.a1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Seminar {
+public class Seminar<T extends IStudent> {
     private String name;
     private String id;
 
-    //TODO: List of participants
+    private final List<T> participants;
 
     public Seminar(String name, String id) {
         this.name = name;
         this.id = id;
-        //TODO: Initialize list of participants
+        participants = new ArrayList<>();
     }
 
-    public void addParticipant(/*TODO: Parameter*/) {
-        //TODO: Add to list of participants
+    public void addParticipant(T person) {
+        participants.add(person);
     }
 
-    public /*TODO: Return Type*/ getParticipants() {
+    public List<T> getParticipants() {
         return participants;
+    }
+
+    public List<T> getParticipantsFromStudyProgram(String subject) {
+        return getParticipants()
+                .stream()
+                .filter(p -> p.getSubject().equalsIgnoreCase(subject))
+                .toList();
+
     }
 
 
