@@ -33,4 +33,9 @@ class ThesisGradingTest {
         assertEquals(2.15, tg.calculcateFinalGrade(1.0,5.0,3.3));
     }
 
+    @Test
+    public void gradeTest5() {
+        assertThrows(NoSuchGradeException.class, () -> tg.calculcateFinalGrade(1.0,4.0, 7.0));
+    }
+
 }
