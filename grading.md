@@ -24,3 +24,13 @@
 | **Total** | 6.0/10.0 |
 
 - Exercise 1: Nice use of streams.
+
+
+## HW3
+
+| Exercise  | Points   |
+|-----------|----------|
+| 1         | 0/4      |
+| 2         | 0/2      |
+| 3         | 4/4      |
+| **Total** | 4.0/10.0 |
